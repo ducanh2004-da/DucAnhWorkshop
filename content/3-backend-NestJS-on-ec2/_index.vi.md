@@ -25,11 +25,15 @@ Backend của bạn kết nối các thành phần AI, cơ sở dữ liệu và 
 
 Nhấn **Launch** và chờ đến khi **2/2 checks** thành công.
 
-![Create Account](../images/3/3-1.png?featherlight=false\&width=90pc)
+![Host Fullstack Web A.I](../../images/3/3-1.png?featherlight=false\&width=90pc)
 
 ## 2. Cài Đặt Node.js & Đồng Bộ Mã Backend
 
-SSH (Connect) vào EC2, sau đó cài Node.js:
+SSH (Connect) vào EC2 để kết nối đến console của ec2
+
+![Host Fullstack Web A.I](../../images/2/2-2.png?featherlight=false\&width=90pc)
+
+- Tiếp theo ta update và tải nodejs về:
 
 ```bash
 sudo apt update && sudo apt upgrade -y
@@ -37,22 +41,31 @@ curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt install -y nodejs
 ```
 
-![Create Account](../images/2/2-10.png?featherlight=false\&width=90pc)
 
 **Đồng bộ mã với rsync**:
 
 Trên máy **local**:
 
+- Mở WSL nếu dùng Windows
 ```bash
-# Mở WSL nếu dùng Windows
 wsl -d Ubuntu-22.04
-# Xoá thư mục ~/.ssh cũ nếu có
+```
+
+- Xoá thư mục ~/.ssh cũ nếu có
+
+```bash
 sudo rm -rf /home/ducanh/.ssh
-# Tạo lại thư mục ~/.ssh và copy key vào
+```
+- Tạo lại thư mục ~/.ssh và copy key vào
+
+```bash
 mkdir -p /home/ducanh/.ssh
 cp /mnt/c/Users/<tên-user>/Downloads/<your-key>.pem ~/.ssh/
 chmod 400 ~/.ssh/<your-key>.pem
-# Đồng bộ mã qua rsync
+```
+- Đồng bộ mã qua rsync
+
+```bash
 rsync -avz \
   --exclude 'node_modules' \
   --exclude '.git' \
@@ -61,8 +74,9 @@ rsync -avz \
       -o UserKnownHostsFile=/dev/null" \
   . ubuntu@<DNS-EC2>.amazonaws.com:~/app
 ```
+- Sau đó ta dùng 'ls' để kiểm tra file, folder
 
-![Create Account](images/3/3-3.png?featherlight=false\&width=90pc)
+![Host Fullstack Web A.I](../../images/3/3-4.png?featherlight=false\&width=90pc)
 
 ## 3. Cấu Hình Ứng Dụng & Cơ Sở Dữ Liệu
 
@@ -118,19 +132,19 @@ const address = '0.0.0.0';
 npm run start:prod
 ```
 
-![Create Account](../images/3/3-4.png?featherlight=false\&width=90pc)
+![Host Fullstack Web A.I](../../images/3/3-5.png?featherlight=false\&width=90pc)
 
 Truy cập `http://<IPv4-BackendServer>:10000/graphql` để xác nhận GraphQL Playground đang hoạt động.
 
-![Create Account](../images/3/3-5.png?featherlight=false\&width=90pc)
+![Host Fullstack Web A.I](../../images/3/3-6.png?featherlight=false\&width=90pc)
 
 Sau đó, vào mã frontend và cấu hình URL backend để frontend gọi API:
 
-![Create Account](../images/3/3-6.png?featherlight=false\&width=90pc)
+![Host Fullstack Web A.I](../../images/3/3-7.png?featherlight=false\&width=90pc)
 
 Kết quả: frontend (local) gọi thành công backend (AWS).
 
-![Create Account](../images/3/3-7.png?featherlight=false\&width=90pc)
+![Host Fullstack Web A.I](../../images/3/3-8.png?featherlight=false\&width=90pc)
 
 ---
 

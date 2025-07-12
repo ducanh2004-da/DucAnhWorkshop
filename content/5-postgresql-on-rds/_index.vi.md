@@ -18,7 +18,7 @@ Sử dụng dịch vụ cơ sở dữ liệu quản lý như Amazon RDS giúp b�
 * **VPC**: MyVPC đã cấu hình ít nhất hai AZ với subnet công cộng và riêng tư.
 * **Cài Đặt VPC**: Đảm bảo DNS resolution và DNS hostnames đã được bật cho VPC.
 
-![Create Account](../images/5/5-1.png?featherlight=false\&width=90pc)
+![Host Fullstack Web A.I](../../images/5/5-1.png?featherlight=false\&width=90pc)
 
 * **Security Groups**: Đã có sẵn `MyVPC-sg` cho truy cập EC2 chung.
 
@@ -36,7 +36,7 @@ Sử dụng dịch vụ cơ sở dữ liệu quản lý như Amazon RDS giúp b�
 
 ## 3. Khởi Tạo Instance RDS
 
-![Create Account](../images/5/5-2.png?featherlight=false\&width=90pc)
+![Host Fullstack Web A.I](../../images/5/5-2.png?featherlight=false\&width=90pc)
 
 1. Vào **RDS → Databases → Create database**.
 2. **Engine options**: PostgreSQL (chọn phiên bản mới nhất được hỗ trợ).
@@ -67,11 +67,11 @@ Sử dụng dịch vụ cơ sở dữ liệu quản lý như Amazon RDS giúp b�
    * **Username**: master username
    * **Password**: master password
 
-![Create Account](../images/5/5-3.png?featherlight=false\&width=90pc)
+![Host Fullstack Web A.I](../../images/5/5-3.png?featherlight=false\&width=90pc)
 
 * Lưu cấu hình để kết nối:
 
-![Create Account](../images/5/5-4.png?featherlight=false\&width=90pc)
+![Host Fullstack Web A.I](../../images/5/5-4.png?featherlight=false\&width=90pc)
 
 3. Trên EC2 backend, cập nhật file `.env` tại `~/app/.env`:
 
@@ -79,7 +79,7 @@ Sử dụng dịch vụ cơ sở dữ liệu quản lý như Amazon RDS giúp b�
    DATABASE_URL="postgresql://my_app_role:some_password@<your-endpoint>:5432/my_app"
    ```
 
-   ![Create Account](../images/5/5-5.png?featherlight=false\&width=90pc)
+   ![Host Fullstack Web A.I](../../images/5/5-5.png?featherlight=false\&width=90pc)
 
 4. Vào thư mục ứng dụng và chạy Prisma migrations:
 

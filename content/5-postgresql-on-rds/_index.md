@@ -18,7 +18,7 @@ Using a managed database service like Amazon RDS offloads operational responsibi
 * **VPC**: MyVPC configured across at least two AZs with public and private subnets.
 * **VPC Settings**: DNS resolution and DNS hostnames enabled for the VPC.
 
-![Create Account](../images/5/5-1.png?featherlight=false&width=90pc)
+![Host Fullstack Web A.I](../images/5/5-1.png?featherlight=false&width=90pc)
 
 * **Security Groups**: You should already have `MyVPC-sg` for general EC2 access.
 
@@ -36,7 +36,7 @@ Using a managed database service like Amazon RDS offloads operational responsibi
 
 ## 3. Launch the RDS Instance
 
-![Create Account](../images/5/5-2.png?featherlight=false&width=90pc)
+![Host Fullstack Web A.I](../images/5/5-2.png?featherlight=false&width=90pc)
 
 1. Open **Aurora and RDS service → Databases → Create database button**.
 2. **Choose a database creation method**: Stadard create
@@ -68,11 +68,11 @@ Using a managed database service like Amazon RDS offloads operational responsibi
    * **Username**: your master username
    * **Password**: your master password
 
-![Create Account](../images/5/5-3.png?featherlight=false&width=90pc)
+![Host Fullstack Web A.I](../images/5/5-3.png?featherlight=false&width=90pc)
 
 - After that we save to connect:
 
-![Create Account](../images/5/5-4.png?featherlight=false&width=90pc)
+![Host Fullstack Web A.I](../images/5/5-4.png?featherlight=false&width=90pc)
 
 3. In your backend EC2 instance, update the `.env` file at `~/app/.env`:
 
@@ -80,7 +80,7 @@ Using a managed database service like Amazon RDS offloads operational responsibi
    DATABASE_URL="postgresql://my_app_role:some_password@<your-endpoint>:5432/my_app"
    ```
 
-   ![Create Account](../images/5/5-5.png?featherlight=false&width=90pc)
+   ![Host Fullstack Web A.I](../images/5/5-5.png?featherlight=false&width=90pc)
 
 4. Navigate to your app folder and run Prisma migrations:
 

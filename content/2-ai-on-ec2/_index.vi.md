@@ -25,14 +25,14 @@ chapter: false
 8. **Storage**: 20 GiB
 9. Nhấn **Launch**. Chờ đến khi **2/2 checks** thành công.
 
-![Create Account](../images/2/2-1.png?featherlight=false\&width=90pc)
+![Host Fullstack Web A.I](../../images/2/2-1.png?featherlight=false\&width=90pc)
 
 ## 2. Cài Đặt Docker & Git
 
 * Để cấu hình và triển khai mã nguồn AI trên AWS:
   SSH vào instance qua nút **Connect** => **EC2 Instance Connect**
 
-![Create Account](../images/2/2-10.png?featherlight=false\&width=90pc)
+![Host Fullstack Web A.I](../../images/2/2-2.png?featherlight=false\&width=90pc)
 
 Chạy lệnh để cập nhật và cài Docker:
 
@@ -83,7 +83,7 @@ sudo systemctl start docker
 docker version
 ```
 
-![Create Account](../images/2/2-2.png?featherlight=false\&width=90pc)
+![Host Fullstack Web A.I](../../images/2/2-3.png?featherlight=false\&width=90pc)
 
 **Cài đặt Git**:
 
@@ -97,10 +97,15 @@ git --version
 
 ```bash
 git clone https://github.com/<tên-dự-án-github>
+```
+
+sử dụng 'ls' để xem các file, folder trong ec2 mà mình đã clone:
+
+```bash
 ls
 ```
 
-![Create Account](../images/2/2-3.png?featherlight=false\&width=90pc)
+![Host Fullstack Web A.I](../../images/2/2-4.png?featherlight=false\&width=90pc)
 
 **Khởi chạy dự án bằng Docker**:
 
@@ -108,14 +113,14 @@ ls
 sudo docker compose up -d
 ```
 
-![Create Account](../images/2/2-4.png?featherlight=false\&width=90pc)
+![Host Fullstack Web A.I](../../images/2/2-5.png?featherlight=false\&width=90pc)
 
 ## 3. Kiểm Tra Kết Nối & Cấu Hình Endpoint
 
 * Mở địa chỉ Public IPv4 của EC2 chạy AI trên tab trình duyệt để kiểm tra kết nối.
 
-![Create Account](../images/2/2-5.png?featherlight=false\&width=90pc)
+![Host Fullstack Web A.I](../../images/2/2-6.png?featherlight=false\&width=90pc)
 
 * Khi thành công, thêm địa chỉ IPv4 đó vào file `.env` trong mã nguồn backend để gọi API AI.
 
-![Create Account](../images/2/2-6.png?featherlight=false\&width=90pc)
+![Host Fullstack Web A.I](../../images/2/2-7.png?featherlight=false\&width=90pc)
