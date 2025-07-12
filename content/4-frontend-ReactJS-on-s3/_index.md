@@ -23,7 +23,7 @@ Delivering your React application as a static website on S3 combines blazing-fas
    * **Block Public Access**: Uncheck **Block all public access**. Confirm you understand that this bucket will serve public content.
 3. (Optional) Add tags such as `Project: Lab-AI` or `Environment: Production` for easy resource tracking.
 
-![Create Account](/images/4/4-1.png?featherlight=false&width=90pc)
+![Create Account](../images/4/4-1.png?featherlight=false&width=90pc)
 
 ## 2. Build Your React App Locally
 
@@ -42,7 +42,7 @@ This command outputs optimized static assets in the `build/` (or `dist/`) folder
 3. Choose **Enable** → set **Index document** to `index.html` → click **Save changes**.
 4. Note the **Bucket website endpoint** URL—this is the public URL for your React app.
 
-![Create Account](/images/4/4-2.png?featherlight=false&width=90pc)
+![Create Account](../images/4/4-2.png?featherlight=false&width=90pc)
 
 ## 4. Configure a Public-Read Bucket Policy
 
@@ -74,9 +74,9 @@ To allow anyone to fetch your static files, apply a bucket policy:
 
 3. Click **Save**.
 
-![Create Account](/images/4/4-3.png?featherlight=false&width=90pc)
+![Create Account](../images/4/4-3.png?featherlight=false&width=90pc)
 
-![Create Account](/images/4/4-4.png?featherlight=false&width=90pc)
+![Create Account](../images/4/4-4.png?featherlight=false&width=90pc)
 
 ## 5. Upload Your Build Artifacts
 
@@ -84,17 +84,17 @@ To allow anyone to fetch your static files, apply a bucket policy:
 2. Click **Add files** and **Add folder**, then select all contents of your `build/` directory.
 3. Click **Upload**—your React site is now live at the bucket website endpoint.
 
-![Create Account](/images/4/4-5.png?featherlight=false&width=90pc)
+![Create Account](../images/4/4-5.png?featherlight=false&width=90pc)
 
 ## 6. Result:
 
 - We switch Properties tab then scroll down and copy the url to run web on browser:
 
-![Create Account](/images/4/4-6.png?featherlight=false&width=90pc)
+![Create Account](../images/4/4-6.png?featherlight=false&width=90pc)
 
 - the data from backend(aws) fetch to frontend(aws) well
 
-![Create Account](/images/4/4-7.png?featherlight=false&width=90pc)
+![Create Account](../images/4/4-7.png?featherlight=false&width=90pc)
 
 ## 6. (Optional) Accelerate Delivery with CloudFront
 

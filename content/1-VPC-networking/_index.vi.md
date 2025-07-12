@@ -25,7 +25,7 @@ Một mạng lưới vững chắc là nền tảng của mọi ứng dụng tr�
 
 > **Lưu ý:** chúng ta sẽ tạo tổng cộng 4 subnet: 3 subnet công cộng và 1 subnet riêng.
 
-![Create Account](/images/1/1-1.png?featherlight=false\&width=90pc)
+![Create Account](../images/1/1-1.png?featherlight=false\&width=90pc)
 
 ## 2. Xây dựng Các Subnet Công Cộng Đầu Tiên
 
@@ -39,7 +39,7 @@ Một mạng lưới vững chắc là nền tảng của mọi ứng dụng tr�
 
 > **Lưu ý:** tiếp tục tương tự để tạo các subnet công cộng còn lại.
 
-![Create Account](/images/1/1-3.png?featherlight=false\&width=90pc)
+![Create Account](../images/1/1-3.png?featherlight=false\&width=90pc)
 
 ## 3. Xây dựng Subnet Riêng
 
@@ -49,7 +49,7 @@ Một mạng lưới vững chắc là nền tảng của mọi ứng dụng tr�
    * **CIDR**: ví dụ `10.0.1.0/27`
    * Chọn bất kỳ một AZ
 
-![Create Account](/images/1/1-4.png?featherlight=false\&width=90pc)
+![Create Account](../images/1/1-4.png?featherlight=false\&width=90pc)
 
 2. Giữ **auto‑assign public IP** ở trạng thái tắt—subnet này chỉ dành cho dịch vụ nội bộ.
 
@@ -61,7 +61,7 @@ Một mạng lưới vững chắc là nền tảng của mọi ứng dụng tr�
   2. Tên: `myIGW`
   3. Chọn → **Actions → Attach to VPC** → MyVPC
 
-![Create Account](/images/1/1-5.png?featherlight=false\&width=90pc)
+![Create Account](../images/1/1-5.png?featherlight=false\&width=90pc)
 
 * **Bảng Định Tuyến Công Cộng**: định tuyến cho subnet công cộng
 
@@ -70,7 +70,7 @@ Một mạng lưới vững chắc là nền tảng của mọi ứng dụng tr�
   3. Trong **Routes** → **Edit** → Thêm tuyến: `0.0.0.0/0` → Target: `myIGW`
   4. **Subnet Associations** → **Edit** → gắn tất cả ba `PublicSubnet*`.
 
-![Create Account](/images/1/1-7.png?featherlight=false\&width=90pc)
+![Create Account](../images/1/1-7.png?featherlight=false\&width=90pc)
 
 * **Bảng Định Tuyến Riêng**: định tuyến cho subnet riêng
 
@@ -90,7 +90,7 @@ Một mạng lưới vững chắc là nền tảng của mọi ứng dụng tr�
    * Các port ứng dụng cần thiết (ví dụ HTTP/HTTPS)
 5. **Outbound**: cho phép tất cả.
 
-![Create Account](/images/1/1-9.png?featherlight=false\&width=90pc)
+![Create Account](../images/1/1-9.png?featherlight=false\&width=90pc)
 
 ---
 

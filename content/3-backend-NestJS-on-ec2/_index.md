@@ -26,13 +26,13 @@ Your backend glues together AI, database, and frontend. Here you’ll provision 
 
 Wait for **2/2 checks**.
 
-![Create Account](/images/3/3-1.png?featherlight=false&width=90pc)
+![Create Account](../images/3/3-1.png?featherlight=false&width=90pc)
 
 ## 2. Install Node.js & Sync Backend Code from local to ec2
 
 Choose that instance we have created -> Connect, then SSH(Connect) in EC2 via EC2 Instance Connect
 
-![Create Account](/images/2/2-10.png?featherlight=false&width=90pc)
+![Create Account](../images/2/2-10.png?featherlight=false&width=90pc)
 
 then we set EC2 Instance
 
@@ -47,7 +47,7 @@ curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt install -y nodejs
 ```
 
-![Create Account](/images/3/3-2.png?featherlight=false&width=90pc)
+![Create Account](../images/3/3-2.png?featherlight=false&width=90pc)
 
 **rsync**:
 
@@ -77,7 +77,7 @@ rsync -avz \
   . ubuntu@<DNS of your Ec2>.amazonaws.com:~/app
 ```
 
-![Create Account](/images/3/3-3.png?featherlight=false&width=90pc)
+![Create Account](../images/3/3-3.png?featherlight=false&width=90pc)
 
 ## 3. App Setup & Database
 
@@ -128,19 +128,19 @@ const address = '0.0.0.0';
 npm run start:prod
 ```
 
-![Create Account](/images/3/3-4.png?featherlight=false&width=90pc)
+![Create Account](../images/3/3-4.png?featherlight=false&width=90pc)
 
 Visit `http://<BackendServer-IPv4>:10000/graphql` to confirm GraphQL playground is live.
 
-![Create Account](/images/3/3-5.png?featherlight=false&width=90pc)
+![Create Account](../images/3/3-5.png?featherlight=false&width=90pc)
 
 Then we go to source code of front end, configure backend url to frontend call backend to get backend API:
 
-![Create Account](/images/3/3-6.png?featherlight=false&width=90pc)
+![Create Account](../images/3/3-6.png?featherlight=false&width=90pc)
 
 Finally, we have the result front-end(Local) call back-end(AWS):
 
-![Create Account](/images/3/3-7.png?featherlight=false&width=90pc)
+![Create Account](../images/3/3-7.png?featherlight=false&width=90pc)
 
 ---
 

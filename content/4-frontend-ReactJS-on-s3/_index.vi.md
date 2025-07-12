@@ -23,7 +23,7 @@ Cung cấp ứng dụng React của bạn dưới dạng website tĩnh trên S3 
    * **Block Public Access**: Bỏ chọn **Block all public access**. Xác nhận bạn hiểu bucket này sẽ phục vụ nội dung công khai.
 3. (Tuỳ chọn) Thêm tag như `Project: Lab-AI` hoặc `Environment: Production` để dễ theo dõi.
 
-![Create Account](/images/4/4-1.png?featherlight=false\&width=90pc)
+![Create Account](../images/4/4-1.png?featherlight=false\&width=90pc)
 
 ## 2. Build Ứng Dụng React Local
 
@@ -42,7 +42,7 @@ Lệnh này tạo ra các asset tối ưu trong thư mục `build/` (hoặc `dis
 3. Chọn **Enable**, đặt **Index document** là `index.html`, rồi **Save changes**.
 4. Ghi lại URL **Bucket website endpoint**—đây là URL public cho app React của bạn.
 
-![Create Account](/images/4/4-2.png?featherlight=false\&width=90pc)
+![Create Account](../images/4/4-2.png?featherlight=false\&width=90pc)
 
 ## 4. Cấu Hình Chính Sách Public-Read
 
@@ -68,7 +68,7 @@ Cho phép mọi người lấy file tĩnh, áp dụng policy:
 
 3. Nhấn **Save**.
 
-![Create Account](/images/4/4-3.png?featherlight=false\&width=90pc)
+![Create Account](../images/4/4-3.png?featherlight=false\&width=90pc)
 
 ## 5. Upload Artifact Build
 
@@ -76,17 +76,17 @@ Cho phép mọi người lấy file tĩnh, áp dụng policy:
 2. Chọn **Add files** và **Add folder**, sau đó chọn tất cả nội dung trong thư mục `build/`.
 3. Nhấn **Upload**—ứng dụng React của bạn đã live tại endpoint bucket.
 
-![Create Account](/images/4/4-5.png?featherlight=false\&width=90pc)
+![Create Account](../images/4/4-5.png?featherlight=false\&width=90pc)
 
 ## 6. Kết Quả
 
 * Chuyển sang tab **Properties**, cuộn xuống và copy URL để chạy trang trên trình duyệt:
 
-![Create Account](/images/4/4-6.png?featherlight=false\&width=90pc)
+![Create Account](../images/4/4-6.png?featherlight=false\&width=90pc)
 
 * Dữ liệu từ backend (AWS) được gọi vào frontend (AWS) thành công:
 
-![Create Account](/images/4/4-7.png?featherlight=false\&width=90pc)
+![Create Account](../images/4/4-7.png?featherlight=false\&width=90pc)
 
 ## 7. (Tuỳ chọn) Tăng Tốc Phân Phối với CloudFront
 

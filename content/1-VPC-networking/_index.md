@@ -20,8 +20,8 @@ build a VPC spanning 3 Availability Zones (AZs). Each AZ will have one public su
 3. Click **Create**—you now have a VPC spanning all AZs in the region.
 > **Note:** we create about 4 subnet: 3 Public subnet and 1 private subnet 
 
-![Create Account](/images/1/1-1.png?featherlight=false&width=90pc)
-![Create Account](/images/1/1-2.png?featherlight=false&width=90pc)
+![Create Account](../images/1/1-1.png?featherlight=false&width=90pc)
+![Create Account](../images/1/1-2.png?featherlight=false&width=90pc)
 
 ## 2. Build First Public Subnets  
 1. Go to **VPC → Subnets → Create Subnet**  
@@ -32,7 +32,7 @@ build a VPC spanning 3 Availability Zones (AZs). Each AZ will have one public su
 3. After creation, select each subnet → **Actions → Edit auto-assign IP settings** → check **Enable auto-assign public IPv4 address** to set it to public
 > **Note:** we build continue with other public subnet
 
-![Create Account](/images/1/1-3.png?featherlight=false&width=90pc)
+![Create Account](../images/1/1-3.png?featherlight=false&width=90pc)
 
 ## 3. Build Your Private Subnet  
 1. **Create Subnet** as before:  
@@ -41,7 +41,7 @@ build a VPC spanning 3 Availability Zones (AZs). Each AZ will have one public su
    - **CIDR**: e.g. `10.0.1.0/27`  
    - Choose any one AZ.  
 
-![Create Account](/images/1/1-4.png?featherlight=false&width=90pc)
+![Create Account](../images/1/1-4.png?featherlight=false&width=90pc)
 
 2. Leave **auto‑assign public IP** disabled—this subnet is for internal services only.
 
@@ -51,7 +51,7 @@ build a VPC spanning 3 Availability Zones (AZs). Each AZ will have one public su
   2. Name: `myIGW`  
   3. Click **Create internet gateway** button
 
-![Create Account](/images/1/1-5.png?featherlight=false&width=90pc)
+![Create Account](../images/1/1-5.png?featherlight=false&width=90pc)
 
   4. Select that internet gateway we have created → **Actions → Attach to VPC** → MyVPC  
 
@@ -60,15 +60,15 @@ build a VPC spanning 3 Availability Zones (AZs). Each AZ will have one public su
   2. Name: `MyPublic-rtb`, VPC: MyVPC  
   3. Click **Create** button
 
-![Create Account](/images/1/1-6.png?featherlight=false&width=90pc)
+![Create Account](..../images/1/1-6.png?featherlight=false&width=90pc)
 
   4. Under **Routes** → **Edit** → Add Destination IP: `0.0.0.0/0` and Target: `myIGW`  
 
-![Create Account](/images/1/1-7.png?featherlight=false&width=90pc)
+![Create Account](../images/1/1-7.png?featherlight=false&width=90pc)
 
   5. Under **Subnet Associations** → **Edit** → attach all three `PublicSubnet*`.
 
-![Create Account](/images/1/1-8.png?featherlight=false&width=90pc)
+![Create Account](../images/1/1-8.png?featherlight=false&width=90pc)
 
 - **Private Route Table**: for routing in private subnet 
   1. **VPC → Route Tables → Create**
@@ -86,7 +86,7 @@ build a VPC spanning 3 Availability Zones (AZs). Each AZ will have one public su
    - Type: All ICMP - IPv4, Protocol: ICMP, port: all from anywhere IPv4 
 4. **Outbound**: allow all.
 
-![Create Account](/images/1/1-9.png?featherlight=false&width=90pc)
+![Create Account](../images/1/1-9.png?featherlight=false&width=90pc)
 
 ---
 

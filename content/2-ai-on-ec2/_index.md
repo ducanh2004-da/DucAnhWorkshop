@@ -22,13 +22,13 @@ Containerizing your AI model in Docker ensures portability, repeatable builds, a
 8. **Storage**: 20 GiB  
 9. Click **Launch**. Wait for **2/2 checks** to pass.
 
-![Create Account](/images/2/2-1.png?featherlight=false&width=90pc)
+![Create Account](../images/2/2-1.png?featherlight=false&width=90pc)
 
 ## 2. Install Docker & Git  
 - To configure and deploy source code of A.I on AWS to run
 SSH into your instance via **Connect** button => **EC2 Instance Connect** 
 
-![Create Account](/images/2/2-10.png?featherlight=false&width=90pc)
+![Create Account](../images/2/2-10.png?featherlight=false&width=90pc)
 
 run to install docker
 
@@ -72,7 +72,7 @@ sudo systemctl start docker
 docker version
 ```
 
-![Create Account](/images/2/2-2.png?featherlight=false&width=90pc)
+![Create Account](../images/2/2-2.png?featherlight=false&width=90pc)
 
 **Install git**:
 - Update package:
@@ -93,7 +93,7 @@ git clone https://github.com/<tên dự án github>
 ```
 - ls: to list all the folder file we have cloned
 
-![Create Account](/images/2/2-3.png?featherlight=false&width=90pc)
+![Create Account](../images/2/2-3.png?featherlight=false&width=90pc)
 
 
 **Run project with docker**:
@@ -101,14 +101,14 @@ git clone https://github.com/<tên dự án github>
 sudo docker compose up -d
 ```
 
-![Create Account](/images/2/2-4.png?featherlight=false&width=90pc)
+![Create Account](../images/2/2-4.png?featherlight=false&width=90pc)
 
 ## 3. Check the connection and import IP on source code backend to call API A.I:
 - Open ublic IPv4 address of A.I EC2 on another tab to check
 
-![Create Account](/images/2/2-5.png?featherlight=false&width=90pc)
+![Create Account](../images/2/2-5.png?featherlight=false&width=90pc)
 
 - When successfully, we add that IPv4 on .env file of source code backend to call API A.I 
 
-![Create Account](/images/2/2-6.png?featherlight=false&width=90pc)
+![Create Account](../images/2/2-6.png?featherlight=false&width=90pc)
 
